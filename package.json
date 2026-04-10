@@ -1,0 +1,25 @@
+{
+  "name": "stock-assistant",
+  "version": "1.0.0",
+  "description": "US Stock Day Trading Assistant powered by Claude AI",
+  "type": "module",
+  "scripts": {
+    "start": "concurrently \"node server.js\" \"cd dashboard && npm run dev\"",
+    "server": "node server.js",
+    "premarket": "node scripts/analyze-premarket.js",
+    "postmarket": "node scripts/analyze-postmarket.js"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.39.0",
+    "@google/generative-ai": "^0.24.1",
+    "chalk": "^5.3.0",
+    "concurrently": "^9.2.1",
+    "date-fns": "^4.1.0",
+    "date-fns-tz": "^3.2.0",
+    "dotenv": "^16.4.7",
+    "express": "^4.22.1",
+    "firebase-admin": "^13.0.0",
+    "node-fetch": "^3.3.2",
+    "yahoo-finance2": "^2.13.3"
+  }
+}

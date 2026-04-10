@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* { box-sizing: border-box; }
+
+body {
+  font-family: 'JetBrains Mono', Consolas, monospace;
+  background-color: #0f1117;
+  color: #e2e8f0;
+}
+
+/* 스크롤바 스타일 */
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: #1a1d2e; }
+::-webkit-scrollbar-thumb { background: #2a2d3e; border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: #3a3d4e; }
+
+/* 카드 글래스 효과 */
+.glass-card {
+  background: rgba(26, 29, 46, 0.8);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(42, 45, 62, 0.8);
+}
+
+/* 그라디언트 텍스트 */
+.gradient-text {
+  background: linear-gradient(135deg, #6ee7f7 0%, #a78bfa 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* 애니메이션 */
+@keyframes pulse-green {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+.live-dot { animation: pulse-green 2s ease-in-out infinite; }
