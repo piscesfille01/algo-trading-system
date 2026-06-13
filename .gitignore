@@ -5,3 +5,14 @@ output/
 dashboard/node_modules/
 dashboard/.env
 dashboard/dist/
+
+# Backtest and analysis files
+**/backtest*.js
+**/backtest*.sh
+analyze-*.mjs
+test-*.js
+
+# Strategy documents
+BACKTEST*.md
+CLEANUP*.md
+VERSION*.md

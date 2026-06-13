@@ -1,10 +1,10 @@
 #!/usr/bin/env node
 /**
- * 통합 실행 스크립트
+ * Integrated execution script
  *
- * node scripts/run.js              → 종목 추천 + 보유종목 분석
- * node scripts/run.js holdings     → 보유종목 분석만
- * node scripts/run.js 2026-03-20   → 특정 날짜 추천
+ * node scripts/run.js              → Stock picks + holdings analysis
+ * node scripts/run.js holdings     → Holdings analysis only
+ * node scripts/run.js 2026-03-20   → Specific date picks
  */
 
 import { execSync } from 'child_process';

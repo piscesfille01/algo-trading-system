@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 /**
- * 실전 매도 기록
- * 사용법: node scripts/sell.js SMCI 31.5
+ * Live trading sell records
+ * Usage: node scripts/sell.js SMCI 31.5
  */
 
 import fs from 'fs';

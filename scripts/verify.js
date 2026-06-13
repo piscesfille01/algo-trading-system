@@ -1,12 +1,12 @@
 #!/usr/bin/env node
 /**
- * 추천 결과 검증
- * 실행: node scripts/verify.js 2026-01-12
+ * Verify recommendation results
+ * Usage: node scripts/verify.js 2026-01-12
  *
- * 판정 기준:
- *  - 20 영업일 내 목표가 도달 → ✅ 수익
- *  - 20 영업일 내 손절가 도달 → ❌ 손절
- *  - 20 영업일 내 둘 다 미달  → 20일 종가 기준 플러스면 ✅, 마이너스면 ❌
+ * Evaluation criteria:
+ *  - Target hit within 20 trading days → ✅ Win
+ *  - Stop loss hit within 20 trading days → ❌ Loss
+ *  - Neither hit within 20 days → ✅ if close > buy, ❌ otherwise
  */
 
 import fs from 'fs';

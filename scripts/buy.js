@@ -1,10 +1,10 @@
 #!/usr/bin/env node
 /**
- * 실전 매수 기록
- * 사용법: node scripts/buy.js SMCI PLTR
+ * Live trading buy records
+ * Usage: node scripts/buy.js SMCI PLTR
  *
- * 오늘 run.js로 추천받은 종목 중 실제 진입한 종목을 기록.
- * 추천가/목표가/손절가는 picks-pending.json에서 자동으로 가져옴.
+ * Records actual entries from today's recommendations (via run.js).
+ * Entry/target/stop prices are auto-loaded from picks-pending.json.
  */
 
 import fs from 'fs';

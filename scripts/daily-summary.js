@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 /**
- * 실전 포트폴리오 일일 요약
- * 사용법: node scripts/daily-summary.js
+ * Live portfolio daily summary
+ * Usage: node scripts/daily-summary.js
  */
 
 import fs from 'fs';

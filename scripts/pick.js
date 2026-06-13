@@ -1,12 +1,12 @@
 #!/usr/bin/env node
 /**
- * 단타 종목 추천 — OHLCV 기반 3가지 패턴
- * 실행: node scripts/pick.js [YYYY-MM-DD]
+ * Day trading stock picks — 3 OHLCV-based patterns
+ * Usage: node scripts/pick.js [YYYY-MM-DD]
  *
- * 패턴:
- *  1. RSI < 30                          → 과매도 반등 (승률 56~59%)
- *  2. RSI < 35 + 거래량 3일 연속 증가   → 바닥 축적 (승률 64%)
- *  3. RSI < 40 + MACD 상승             → 모멘텀 전환 (승률 56%)
+ * Patterns:
+ *  1. RSI < 30                          → Oversold bounce (56~59% win rate)
+ *  2. RSI < 35 + 3-day volume increase  → Bottom accumulation (64% win rate)
+ *  3. RSI < 40 + MACD rising            → Momentum shift (56% win rate)
  */
 
 import dotenv from 'dotenv';

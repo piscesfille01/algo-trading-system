@@ -34,7 +34,7 @@ function readJSON(filepath) {
   }
 }
 
-// GET /api/data — 대시보드에 필요한 모든 데이터
+// GET /api/data — All data needed for dashboard
 app.get('/api/data', (_req, res) => {
   const today = new Date().toLocaleDateString('en-CA', { timeZone: 'America/New_York' });
 
@@ -50,7 +50,7 @@ app.get('/api/data', (_req, res) => {
   res.json({ todayRec, portfolio, trades, performance });
 });
 
-// GET /api/status — 분석 작업 진행 상태 + 마지막 로그
+// GET /api/status — Analysis job status + last logs
 app.get('/api/status', (_req, res) => {
   res.json({
     ...jobStatus,
@@ -59,10 +59,10 @@ app.get('/api/status', (_req, res) => {
   });
 });
 
-// POST /api/analyze/premarket — 장 전 분석 실행
+// POST /api/analyze/premarket — Run pre-market analysis
 app.post('/api/analyze/premarket', (req, res) => {
   if (jobStatus.premarket === 'running') {
-    return res.json({ running: true, message: '이미 분석 중입니다' });
+    return res.json({ running: true, message: 'Already analyzing' });
   }
 
   jobStatus.premarket = 'running';
@@ -86,10 +86,10 @@ app.post('/api/analyze/premarket', (req, res) => {
   res.json({ running: true });
 });
 
-// POST /api/analyze/postmarket — 장 후 결과 업데이트
+// POST /api/analyze/postmarket — Update post-market results
 app.post('/api/analyze/postmarket', (req, res) => {
   if (jobStatus.postmarket === 'running') {
-    return res.json({ running: true, message: '이미 분석 중입니다' });
+    return res.json({ running: true, message: 'Already analyzing' });
   }
 
   jobStatus.postmarket = 'running';

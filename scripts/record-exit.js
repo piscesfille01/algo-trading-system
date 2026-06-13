@@ -3,12 +3,12 @@ const fs = require('fs');
 const path = require('path');
 
 // ═══════════════════════════════════════════════════════════════════
-// 매도 기록 스크립트
-// 용도: 종목 청산 시 trades-manual.json 자동 업데이트
-// 사용: node scripts/record-exit.js SYMBOL PRICE [NOTE]
-// 예시:
-//   node scripts/record-exit.js CTSH 66.50              # 자동 판단
-//   node scripts/record-exit.js AXP 280.00 "조기 익절"   # 자동 판단 + 메모
+// Exit recording script
+// Purpose: Auto-update trades-manual.json on position close
+// Usage: node scripts/record-exit.js SYMBOL PRICE [NOTE]
+// Examples:
+//   node scripts/record-exit.js CTSH 66.50              # Auto-classify
+//   node scripts/record-exit.js AXP 280.00 "Early exit"  # Auto + note
 // ═══════════════════════════════════════════════════════════════════
 
 const TRADES_PATH = path.join(__dirname, '../output/trades-manual.json');
